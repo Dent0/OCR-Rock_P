@@ -27,7 +27,7 @@ class EasyOCRM:
         if self.debug:
             print(f"Загрузка EasyOCR: {self.lang_list}, GPU={self.gpu}")
         start = time.time()
-        self.reader = easyocr.Reader(self.lang_list, gpu=self.gpu)
+        self.reader = easyocr.Reader(self.lang_list, gpu=self.gpu, verbose=False)
         if self.debug:
             print(f"Загружено за {time.time() - start:.2f} сек")
 

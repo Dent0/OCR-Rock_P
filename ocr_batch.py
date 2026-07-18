@@ -28,6 +28,7 @@ try:
     from tqdm import tqdm
     TQDM_AVAILABLE = True
 except ImportError:
+    tqdm = None
     TQDM_AVAILABLE = False
     print("Для прогресс-бара установите: pip install tqdm")
 
@@ -36,6 +37,7 @@ try:
     from pdf2image import convert_from_path
     PDF2IMAGE_AVAILABLE = True
 except ImportError:
+    convert_from_path = None
     PDF2IMAGE_AVAILABLE = False
     print("Для поддержки PDF установите: "
           "\npip install pdf2imag;"
@@ -334,7 +336,7 @@ def worker_func(args: Tuple[str, str, str, bool]) -> Dict[str, Any]:
     Returns: dict with image_path, text, status, error, processing_time
     """
     image_path, output_dir, engine_name, save_preproc = args
-    result = {
+    result: Dict[str, Any] = {
         "image": os.path.basename(image_path),
         "image_path": image_path,
         "status": "success",

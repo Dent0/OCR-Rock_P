@@ -194,4 +194,9 @@ logs/
 results/*
 results/
 results
+
+batch/*
+batch/
+batch
+
 images/img

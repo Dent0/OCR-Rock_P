@@ -2,7 +2,6 @@ import os
 import uuid
 import shutil
 from fastapi import FastAPI, UploadFile, File, HTTPException, Form
-from fastapi.responses import JSONResponse
 from celery.result import AsyncResult
 from app.tasks import process_document
 from app.config import UPLOAD_DIR, SUPPORTED_EXTENSIONS, DEFAULT_ENGINE

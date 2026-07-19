@@ -25,7 +25,7 @@ def process_single_image(image_path: str, engine_name: str = "tesseract") -> Dic
         # Для Tesseract явно указываем русский язык
         if engine_name == 'tesseract':
             from classes.ocr_tesseract import TesseractOCRM
-            engine = TesseractOCRM(lang='rus+eng', debug=False)
+            engine = TesseractOCRM(lang='eng+rus', debug=False)
         else:
             engine = get_ocr_engine(engine_name, debug=False)
 

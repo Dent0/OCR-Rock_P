@@ -192,8 +192,7 @@ db.sqlite3
 logs/
 
 results/*
-results/
-results
+uploads/*
 
 batch/*
 batch/

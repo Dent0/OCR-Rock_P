@@ -44,8 +44,9 @@ def test_submit_invalid_engine():
 
         with open(test_image_path, 'rb') as f:
             response = client.post(
-                "/ocr/submit?engine=invalid",
-                files={"file": ("test_image.png", f, "image/png")}
+                "/ocr/submit",
+                files={"file": ("test_image.png", f, "image/png")},
+                data={"engine": "invalid"}  # ← как form-data
             )
         assert response.status_code == 400
         assert "Unsupported engine" in response.json()["detail"]

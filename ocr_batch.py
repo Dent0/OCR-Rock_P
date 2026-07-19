@@ -246,10 +246,10 @@ def deskew_image_pca(image):
         angle += 90
 
     # 5. Применяем поворот (в OpenCV поворачиваем на тот же угол)
-    if abs(angle) > 2.8:
+    if abs(angle) > 4 and abs(angle) < 15:
         h, w = image.shape
         center = (w // 2, h // 2)
-        M = cv2.getRotationMatrix2D(center, angle, 1.0)
+        M = cv2.getRotationMatrix2D(center, -angle, 1.0)
         deskewed = cv2.warpAffine(image, M, (w, h),
                                   flags=cv2.INTER_CUBIC,
                                   borderMode=cv2.BORDER_CONSTANT,

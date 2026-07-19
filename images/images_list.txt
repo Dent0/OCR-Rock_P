@@ -1,4 +1,4 @@
-image_en_form_1.png
-image_er_badq_1.png
-image_er_tabs_1.png
-image_ru_mech_1.png
+test_img/image_en_form_1.png
+test_img/image_er_badq_1.png
+test_img/image_er_tabs_1.png
+test_img/image_ru_mech_1.png

@@ -194,6 +194,9 @@ logs/
 results/*
 uploads/*
 
+!results/.gitkeep
+!uploads/.gitkeep
+
 batch/*
 batch/
 batch

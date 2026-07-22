@@ -9,6 +9,9 @@ RUN apt-get update && apt-get install -y \
     poppler-utils \
     && rm -rf /var/lib/apt/lists/*
 
+# Установка PyTorch для ARM (Apple Silicon) или CPU
+RUN pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+
 WORKDIR /app
 
 # 1. Сначала копируем requirements.txt (редко меняется)

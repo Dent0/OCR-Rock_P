@@ -5,7 +5,7 @@ import cv2
 
 
 class TesseractModel:
-    def __init__(self, lang='rus+eng', tesseract_path=None, debug = False):
+    def __init__(self, lang='eng+rus', tesseract_path=None, debug = False):
         """
         Инициализация Tesseract
 
@@ -69,8 +69,8 @@ if __name__ == "__main__":
     text, elapsed = model.recognize(image_path)
 
     print("\n" + "=" * 40)
-    print("📝 РЕЗУЛЬТАТ TESSERACT:")
+    print("РЕЗУЛЬТАТ TESSERACT:")
     print("=" * 40)
     print(text)
     print("=" * 40)
-    print(f"⏱️ {elapsed:.3f} сек")
+    print(f"{elapsed:.3f} сек")

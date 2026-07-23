@@ -13,7 +13,7 @@ class OCRUser(HttpUser):
     @task
     def submit_document(self):
         if not os.path.exists(self.pdf_path):
-            print(f"❌ PDF не найден: {self.pdf_path}")
+            print(f"PDF не найден: {self.pdf_path}")
             return
 
         with open(self.pdf_path, "rb") as f:

@@ -25,7 +25,7 @@ class EasyOCRModel:
             print("⏳ Загрузка EasyOCR...")
             start = time.time()
             self.reader = easyocr.Reader(self.lang_list, gpu=self.use_gpu)
-            print(f"✅ Загружено за {time.time() - start:.2f} сек")
+            print(f"Загружено за {time.time() - start:.2f} сек")
 
     def recognize(self, image_path):
         """
@@ -61,8 +61,8 @@ if __name__ == "__main__":
     text, elapsed = model.recognize(image_path)
 
     print("\n" + "=" * 40)
-    print("📝 РЕЗУЛЬТАТ EASYOCR:")
+    print("РЕЗУЛЬТАТ EASYOCR:")
     print("=" * 40)
     print(text)
     print("=" * 40)
-    print(f"⏱️ {elapsed:.3f} сек")
+    print(f"⏱{elapsed:.3f} сек")

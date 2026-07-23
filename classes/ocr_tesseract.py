@@ -5,7 +5,7 @@ import platform
 
 
 class TesseractOCRM:
-    def __init__(self, lang='rus+eng', config='', debug=False, tesseract_path=None):
+    def __init__(self, lang='eng+rus', config='', debug=False, tesseract_path=None):
         self.lang = lang
         self.config = config
         self.debug = debug

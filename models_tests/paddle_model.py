@@ -58,8 +58,8 @@ if __name__ == "__main__":
     text, elapsed = model.recognize(image_path)
 
     print("\n" + "=" * 40)
-    print("📝 РЕЗУЛЬТАТ:")
+    print("РЕЗУЛЬТАТ:")
     print("=" * 40)
     print(text)
     print("=" * 40)
-    print(f"⏱️ {elapsed:.3f} сек")
+    print(f"{elapsed:.3f} сек")
